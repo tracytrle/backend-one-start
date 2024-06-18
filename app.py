@@ -60,6 +60,9 @@ def create_app():
     
     from routes.roberta_router import bp as roberta_bp
     app.register_blueprint(roberta_bp)
+
+    from routes.distilbert_router import bp as distilbert_bp
+    app.register_blueprint(distilbert_bp)
     
     return app
 app = create_app()
