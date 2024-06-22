@@ -60,6 +60,9 @@ def create_app():
     # db.init_app(app)
     CORS(app)
     
+    from routes.root_router import bp as root_bp
+    app.register_blueprint(root_bp)
+    
     from routes.roberta_router import bp as roberta_bp
     app.register_blueprint(roberta_bp)
 
